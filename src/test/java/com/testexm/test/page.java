@@ -61,9 +61,11 @@ public class page extends BaseClass{
                     "}";
             Response postUserResponse = postUsers(userBody);
 
-            System.out.println(postUserResponse.asString());
+//            System.out.println(postUserResponse.asString());
 
             assertThat(postUserResponse.getStatusCode(), is(HttpStatus.SC_CREATED));
+
+            logger.info(postUserResponse.asString());
 
             JSONObject userData = new JSONObject(postUserResponse.asString());
 
@@ -152,6 +154,8 @@ public class page extends BaseClass{
             assertThat(postUserResponse.getStatusCode(), is(HttpStatus.SC_CREATED));
 
             JSONObject userData = new JSONObject(postUserResponse.asString());
+
+            logger.info(postUserResponse.asPrettyString());
 
             int userId = userData.getInt("id");
 

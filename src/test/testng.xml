@@ -8,7 +8,10 @@
 
             <class name="com.testexm.test.page"></class>
             <class name="com.testexm.test.postTest"></class>
+            <class name="com.testexm.test.ToDoTest"></class>
+            <class name="com.testexm.test.UserTest"></class>
 
+            
             <class name="com.testexm.test.data"/>
 
 
